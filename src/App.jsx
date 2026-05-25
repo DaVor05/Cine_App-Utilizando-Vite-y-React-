@@ -53,7 +53,7 @@ function App() {
   const handleReservation = () => {
     if (!customerName.trim() || !customerEmail.trim() || ticketQuantity <= 0 || !roomType || !showtime || !paymentMethod) {
       // TEXTO EXIGIDO TEXTUALMENTE EN LA PÁGINA 4 PUNTO 10 DEL PDF:
-      setMessage("Please complete all fields before making the reservation.");
+      setMessage("Por favor, complete todos los campos antes de realizar la reservación.");
       setIsConfirmed(false);
       setShowSummary(false); 
       return;
@@ -132,7 +132,7 @@ function App() {
                 {/* 9. RENDERIZADO CONDICIONAL DE MENSAJE OBLIGATORIO CUANDO ES 0 (Página 3) */}
                 {ticketQuantity === 0 && (
                   <p className="status-alert error-text" style={{ marginTop: '15px', fontWeight: 'bold' }}>
-                    Please select at least one ticket
+                    Seleccione al menos un boleto.
                   </p>
                 )}
               </div>
